@@ -3,8 +3,8 @@ Contributors: joostdevalk
 Donate link: http://yoast.com/donate/
 Tags: custom fields
 Requires at least: 3.0
-Tested up to: 3.6
-Stable tag: 0.1
+Tested up to: 5.6
+Stable tag: 0.2
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -20,8 +20,8 @@ the ones that start with an underscore ( _ ) that are normally hidden from the c
 
 == Installation ==
 
-1. Upload `cff.php` to the `/wp-content/plugins/` directory
-1. Activate the plugin through the 'Plugins' menu in WordPress
+1. Search for "custom field finder" on the add Plugins screen.
+1. Click install & activate.
 1. Go to Tools -> Custom Field Finder
 
 == Screenshots ==
@@ -30,6 +30,11 @@ the ones that start with an underscore ( _ ) that are normally hidden from the c
 2. Shows some sample plugin output.
 
 == Changelog ==
+
+= 0.2 = 
+
+* Updated screenshots.
+* Updated tested up to.
 
 = 0.1 =
 
