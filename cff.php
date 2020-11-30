@@ -3,9 +3,10 @@
  * Plugin Name:	Custom Field Finder
  * Plugin URI: http://wordpress.org/extend/plugins/custom-field-finder/
  * Description: Allows you to easily find the custom fields (including hidden custom fields) and their values for a post, page or custom post type post.
- * Version: 0.1
+ * Version: 0.2
  * Author: Joost de Valk
  * Author URI: http://yoast.com/
+ * Text Domain: custom-field-finder
  * License: GPL v3
  */
 
@@ -41,13 +42,13 @@ class CustomFieldFinder {
 	function plugin_page() {
 		echo '<div class="wrap">';
 		echo '<div id="icon-tools" class="icon32"><br></div>';
-		echo '<h2>' . $this->name . '</h2>';
+		echo '<h2>' . esc_html__( 'Custom field finder', 'custom-field-finder' ) . '</h2>';
 
-		echo '<p>Enter a post, page or custom post type ID below and press find custom fields to see the custom fields attached to that post.</p>';
+		echo '<p>', esc_html__( 'Enter a post, page or custom post type ID below and press find custom fields to see the custom fields attached to that post.', 'custom-field-finder' ), '</p>';
 		echo '<form method="get" action="' . admin_url( 'tools.php?page=' . $this->hook ) . '">';
 		echo '<input type="hidden" name="page" value="' . $this->hook . '"/>';
-		echo '<label for="post_id">Post ID:</label> <input type="text" name="post_id" id="post_id" value="' . ( ( isset( $_GET['post_id'] ) ) ? intval( $_GET['post_id'] ) : '' ) . '"/><br/><br/>';
-		echo '<input type="submit" class="button-primary" value="Find custom fields"/>';
+		echo '<label for="post_id">', esc_html__( 'Post ID', 'custom-field-finder' ), ':</label> <input type="text" name="post_id" id="post_id" value="' . ( ( isset( $_GET['post_id'] ) ) ? intval( $_GET['post_id'] ) : '' ) . '"/><br/><br/>';
+		echo '<input type="submit" class="button-primary" value="', esc_html__( 'Find custom fields', 'custom-field-finder' ), '"/>';
 		echo '</form>';
 		echo '</div>';
 
@@ -55,16 +56,16 @@ class CustomFieldFinder {
 			echo '<br/><br/>';
 			$post = get_post( intval( $_GET['post_id'] ) );
 			if ( is_null( $post ) ) {
-				echo 'Post ' . intval( $_GET['post_id'] ) . ' not found.';
+				echo sprintf( esc_html__( 'Post %d not found.', 'custom-field-finder' ), (int) $_GET['post_id'] );
 			} else {
-				echo '<h2>Custom fields for post <em>"<a target="_blank" href="' . get_permalink( $post->ID ) . '">' . $post->post_title . '</a>"</em></h2>';
+				echo '<h2>', esc_html__( 'Custom fields for post', 'custom-field-finder' ), ' <em>"<a target="_blank" href="' . get_permalink( $post->ID ) . '">' . $post->post_title . '</a>"</em></h2>';
 				$customs = get_post_custom( $post->ID );
 				if ( count( $customs ) > 0 ) {
 					ksort( $customs );
-					echo '<p>Note that custom fields whose key starts with _ will normally be invisible in the custom fields interface.</p>';
+					echo '<p>', __( 'Note that custom fields whose key starts with _ will normally be invisible in the custom fields interface.', 'custom-field-finder' ), '</p>';
 					echo '<style>#cffoutput { max-width: 600px; } #cffoutput pre { margin: 0 } #cffoutput th, #cffoutput td { text-align: left; vertical-align: text-top; margin: 0; padding: 2px 10px; } #cffoutput tr:nth-child(2n) { background-color: #eee; }</style>';
 					echo '<table id="cffoutput" cellspacing="0" cellpadding="0">';
-					echo '<thead><tr><th width="40%">Key</th><th width="60%">Value(s)</th></tr></thead>';
+					echo '<thead><tr><th width="40%">', esc_html__( 'Key', 'custom-field-finder' ), '</th><th width="60%">Value(s)</th></tr></thead>';
 					echo '<tbody>';
 					foreach ( $customs as $key => $val ) {
 						echo '<tr>';
@@ -85,7 +86,7 @@ class CustomFieldFinder {
 					}
 					echo '</tbody></table>';
 				} else {
-					echo '<p>No custom fields found for post ' . $post->ID . '.</p>';
+					echo '<p>', sprintf( esc_html__( 'No custom fields found for post %d.', 'custom-field-finder' ), $post->ID ), '</p>';
 				}
 			}
 		}

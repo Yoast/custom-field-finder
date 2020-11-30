@@ -35,6 +35,7 @@ the ones that start with an underscore ( _ ) that are normally hidden from the c
 
 * Updated screenshots.
 * Updated tested up to.
+* Made the plugin translation ready.
 
 = 0.1 =
 
