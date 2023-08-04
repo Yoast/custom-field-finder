@@ -3,7 +3,7 @@ Contributors: joostdevalk, yoast
 Donate link: http://yoast.com/donate/
 Tags: custom fields
 Requires at least: 6.1
-Tested up to: 6.2
+Tested up to: 6.3
 Stable tag: 0.3
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
