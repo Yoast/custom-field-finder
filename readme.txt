@@ -2,7 +2,7 @@
 Contributors: joostdevalk, yoast
 Donate link: http://yoast.com/donate/
 Tags: custom fields
-Requires at least: 6.2
+Requires at least: 6.3
 Tested up to: 6.4
 Stable tag: 0.3
 License: GPLv3
