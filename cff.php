@@ -69,7 +69,7 @@ class Yoast_Custom_Field_Finder {
 						echo '<tr>';
 						echo '<td>', esc_html( $key ), '</td><td>';
 						if ( count( $val ) === 1 ) {
-							echo  esc_html( $val[0]), '</pre>';
+							echo  esc_html( $val[0]);
 						}
 						else {
 							foreach ( $val as $v ) {
