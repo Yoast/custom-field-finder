@@ -4,7 +4,7 @@ Donate link: http://yoast.com/donate/
 Tags: custom fields
 Requires at least: 6.3
 Tested up to: 6.4
-Stable tag: 0.3
+Stable tag: 0.4
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 

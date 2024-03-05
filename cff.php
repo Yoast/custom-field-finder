@@ -3,7 +3,7 @@
  * Plugin Name:	Custom field finder
  * Plugin URI: http://wordpress.org/extend/plugins/custom-field-finder/
  * Description: Allows you to easily find the custom fields (including hidden custom fields) and their values for a post, page or custom post type post.
- * Version: 0.3
+ * Version: 0.4
  * Author: Team Yoast
  * Author URI: http://yoast.com/
  * Text Domain: custom-field-finder
