@@ -31,13 +31,23 @@ the custom fields that start with an underscore ( _ ) that are normally hidden f
 
 == Changelog ==
 
+= 0.4 =
+
+Release date: 2024-03-05
+
+* Fixes a potential security issue when using custom fields.
+
 = 0.3 =
+
+Release date: 2020-12-02
 
 * Added a plugin header and icon.
 * Some basic coding style & cleanliness fixes.
-* Fixed a string that was not translateable.
+* Fixed a string that was not translatable.
 
 = 0.2 =
+
+Release date: 2020-11-30
 
 * Updated screenshots.
 * Updated tested up to.
@@ -45,5 +55,6 @@ the custom fields that start with an underscore ( _ ) that are normally hidden f
 
 = 0.1 =
 
-* Initial version.
+Release date: 2013-04-18
 
+* Initial version.
